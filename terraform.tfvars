@@ -1,6 +1,6 @@
 app_name = "kabi-app"
 
-container_port = 3030
+container_port = 4000
 
 listener_priority = 102
 
