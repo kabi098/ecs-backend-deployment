@@ -54,7 +54,7 @@ data "aws_security_group" "ecs_sg" {
 
 resource "aws_ecr_repository" "app" {
 
-  name = var.app_name
+  name         = var.app_name
   force_delete = true
 
 
@@ -150,7 +150,7 @@ resource "aws_ecs_task_definition" "app" {
   container_definitions = jsonencode([
     {
 
-      name  = var.app_name
+      name = var.app_name
 
       image = "${aws_ecr_repository.app.repository_url}:${var.image_tag}"
 
